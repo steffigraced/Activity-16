@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Activity 16</title>
+  <style>
+      /* 1.
+        apply global configs
+      */      
+      /* 2. 
+        - apply Segoe UI font for global style 
+      */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    /* 3.
+        - apply any background images from https://www.pexels.com/ (Note:* choose a landscape type of images)
+        - all text to white
+        - height of the parent container should be 100% in view port height
+        - apply 32 pixels of padding in all sides except top using rem unit
+        - apply a space on top using padding with a value of 15rem using pixels unit.
+        - all text should place to center
+    */
+    .web-view {
+      color: white;
+      height: 100vh;
+      padding: 0 2rem 2rem;
+      padding-top: 240px;
+      text-align: center;
+      background-image: url(https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?cs=srgb&dl=pexels-cadeau-maestro-1170412.jpg&fm=jpg);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* 4.
+        - apply a font size of 3rem in all heading tags
+    */
+   /* 5. 
+        - apply a margin of 1rem for top and bottom and 0 to left and right
+    */
+    .head {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }      
+    /* 6. achor tag
+        - button should be displayed inline block
+        - remove underline
+        - apply a white background
+        - apply any color you want on the text
+        - apply a space inside of 0.75rem for top and bottom and 2rem for left and right;    
+    */
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background: white;
+      color: teal;
+      margin: 0.75rem 2rem;
+    } 
+    /* 7. section    
+        - apply a space in all sides of 2 rem    
+    */
+    .about {
+      padding: 2rem;
+    }
+    /* 8. media queries
+        - inspect the browser and use the mobile inspect tool 
+        - pixel 2 XL, iphone 5 SE, iphone X, ipad,ipad pro
+        - all identified devices above should be configured and use
+        necessary changes on their default css rule for mobile responsiveness
+        - use inline styling for this one    
+    */
+
+       /* iphone 5se 320 */
+       @media(max-width:320px)
+    {
+      .head {
+      color: blue;
+      font-size: 1rem;
+      }
+      p {
+        font-size: 0.75rem;
+      }
+      .web-view {
+      height: 45vh;
+      padding-top: 52px;
+      padding-bottom: 5px;
+      background-image: url(https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?cs=srgb&dl=pexels-fauxels-3184357.jpg&fm=jpg);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+    }
+
+    /* iphone x 375 */
+    @media(min-width:321px) and (max-width:375px)
+    {      
+      .head {
+      color: rgb(231, 28, 197);
+      font-size: 2rem;
+      }
+      .web-view {
+      height: 45vh;
+      padding: 0 10px 10px;
+      padding-top: 60px;
+      background-image: url(https://images.pexels.com/photos/225502/pexels-photo-225502.jpeg?cs=srgb&dl=pexels-tranmautritam-225502.jpg&fm=jpg);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+    }
+
+    /* pixel 2xl 411 */
+    @media(min-width:376px) and (max-width:411px)
+    {
+      .head {
+      color: rgb(85, 52, 128);
+      }
+      .web-view {
+      height: 45vh;
+      padding: 0 50px 50px;
+      padding-top: 100px;
+      background-image: url(https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+    }
+ 
+    
+    /* ipad  768 */
+    @media(min-width:412px) and (max-width:768px)
+    {
+      .head {
+      color: rgb(15, 70, 153);
+      }
+      .web-view {
+      height: 45vh;
+      padding: 0 50px 50px;
+      padding-top: 100px;
+      background-image: url(https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?cs=srgb&dl=pexels-fauxels-3183186.jpg&fm=jpg);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+    }
+
+    /* ipad pro 1024*/
+    @media(min-width:769px) and (max-width:1024px)
+    {
+      .head {
+      color: tomato;
+      }
+      .web-view {
+      height: 45vh;
+      padding: 0 20px 20px;
+      padding-top: 180px;
+      background-image: url(https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header class="web-view">
+    <h1 class="head">Welcome To Our Website</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus sunt recusandae a facere totam?</p>
+    <a href="#" class="btn">Find Out More</a>
+  </header>
+  
+  <section class="about">
+    <h3 class="head">About Our Company</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos repellendus nulla eaque maxime in eveniet aut, cumque reiciendis fugit voluptas saepe distinctio voluptatem excepturi quam rerum tempore debitis possimus? Aliquid adipisci dolorum doloribus voluptate doloremque sed libero dignissimos itaque cumque qui totam, nemo molestiae amet architecto dolore nihil ipsa facilis?</p>
+  </section> 
+</body>
+</html>
